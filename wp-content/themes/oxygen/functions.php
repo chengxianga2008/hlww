@@ -126,3 +126,46 @@ $nav_menu_locations = get_theme_mod('nav_menu_locations');
 if( ! isset($nav_menu_locations['main-menu']) || $nav_menu_locations['main-menu'] == 0)
 	add_action('admin_notices', 'laborator_setup_menus_notice');
 
+
+// changed by Jack, Add product color image size
+	add_image_size( 'variation_table_color', 20, 20, false);
+	
+	
+	
+	/**
+	 * Add new register fields for WooCommerce registration.
+	 *
+	 * @return string Register fields HTML.
+	 */
+	function wooc_extra_register_fields() {
+		?>
+	
+		<p class="form-row form-row-first form-group">
+		<input type="text" class="input-text form-control" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) esc_attr_e( $_POST['billing_first_name'] ); ?>"  placeholder="First Name *"/>
+		</p>
+	
+		<p class="form-row form-row-last form-group">
+		<input type="text" class="input-text form-control" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) esc_attr_e( $_POST['billing_last_name'] ); ?>"  placeholder="Last Name *"/>
+		</p>
+	
+		<div class="clear"></div>
+	
+		<p class="form-row form-row-wide form-group">	
+		<input type="text" class="input-text form-control" name="billing_phone" id="reg_billing_phone" value="<?php if ( ! empty( $_POST['billing_phone'] ) ) esc_attr_e( $_POST['billing_phone'] ); ?>" placeholder="Phone *"/>
+		</p>
+	
+		<?php
+	}
+	
+	add_action( 'woocommerce_register_form_start', 'wooc_extra_register_fields' );
+	
+	function login_function_fix($user_login, $user) {
+	    $user_id = $user->ID;
+	    delete_user_meta( $user_id, "_woocommerce_persistent_cart");
+	    
+	}
+	add_action('wp_login', 'login_function_fix', 10, 2);
+	
+		
+	
+	
