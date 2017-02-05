@@ -145,7 +145,7 @@ if( ! isset($nav_menu_locations['main-menu']) || $nav_menu_locations['main-menu'
 				First Name
 				<span class="required">*</span>
 			</label>
-			<input type="text" class="input-text form-control" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) esc_attr_e( $_POST['billing_first_name'] ); ?>" />
+			<input type="text" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) esc_attr_e( $_POST['billing_first_name'] ); ?>" />
 		</p>
 	
 		<p class="form-row form-row-wide woocommerce-FormRow woocommerce-FormRow--wide">
@@ -153,7 +153,7 @@ if( ! isset($nav_menu_locations['main-menu']) || $nav_menu_locations['main-menu'
 				Last Name
 				<span class="required">*</span>
 			</label>
-			<input type="text" class="input-text form-control" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) esc_attr_e( $_POST['billing_last_name'] ); ?>" />
+			<input type="text" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) esc_attr_e( $_POST['billing_last_name'] ); ?>" />
 		</p>
 	
 		<p class="form-row form-row-wide woocommerce-FormRow woocommerce-FormRow--wide">
@@ -161,7 +161,7 @@ if( ! isset($nav_menu_locations['main-menu']) || $nav_menu_locations['main-menu'
 				Phone
 				<span class="required">*</span>
 			</label>	
-			<input type="tel" class="input-text form-control" name="billing_phone" id="reg_billing_phone" value="<?php if ( ! empty( $_POST['billing_phone'] ) ) esc_attr_e( $_POST['billing_phone'] ); ?>" />
+			<input type="text" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="billing_phone" id="reg_billing_phone" value="<?php if ( ! empty( $_POST['billing_phone'] ) ) esc_attr_e( $_POST['billing_phone'] ); ?>" />
 		</p>
 	
 		<?php
