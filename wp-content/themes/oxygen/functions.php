@@ -140,18 +140,28 @@ if( ! isset($nav_menu_locations['main-menu']) || $nav_menu_locations['main-menu'
 	function wooc_extra_register_fields() {
 		?>
 	
-		<p class="form-row form-row-first form-group">
-		<input type="text" class="input-text form-control" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) esc_attr_e( $_POST['billing_first_name'] ); ?>"  placeholder="First Name *"/>
+		<p class="form-row form-row-wide woocommerce-FormRow woocommerce-FormRow--wide">		
+			<label for="reg_billing_first_name">
+				First Name
+				<span class="required">*</span>
+			</label>
+			<input type="text" class="input-text form-control" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) esc_attr_e( $_POST['billing_first_name'] ); ?>" />
 		</p>
 	
-		<p class="form-row form-row-last form-group">
-		<input type="text" class="input-text form-control" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) esc_attr_e( $_POST['billing_last_name'] ); ?>"  placeholder="Last Name *"/>
+		<p class="form-row form-row-wide woocommerce-FormRow woocommerce-FormRow--wide">
+			<label for="reg_billing_last_name">
+				Last Name
+				<span class="required">*</span>
+			</label>
+			<input type="text" class="input-text form-control" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) esc_attr_e( $_POST['billing_last_name'] ); ?>" />
 		</p>
 	
-		<div class="clear"></div>
-	
-		<p class="form-row form-row-wide form-group">	
-		<input type="text" class="input-text form-control" name="billing_phone" id="reg_billing_phone" value="<?php if ( ! empty( $_POST['billing_phone'] ) ) esc_attr_e( $_POST['billing_phone'] ); ?>" placeholder="Phone *"/>
+		<p class="form-row form-row-wide woocommerce-FormRow woocommerce-FormRow--wide">
+			<label for="reg_billing_phone">
+				Phone
+				<span class="required">*</span>
+			</label>	
+			<input type="tel" class="input-text form-control" name="billing_phone" id="reg_billing_phone" value="<?php if ( ! empty( $_POST['billing_phone'] ) ) esc_attr_e( $_POST['billing_phone'] ); ?>" />
 		</p>
 	
 		<?php
