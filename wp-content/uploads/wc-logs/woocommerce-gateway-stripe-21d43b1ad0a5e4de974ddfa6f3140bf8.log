@@ -1,0 +1,155 @@
+02-22-2017 @ 13:20:03 - Error: Sorry, the minimum allowed order total is <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>0.50</span> to use this payment method.
+02-22-2017 @ 13:21:49 - Info: Begin processing payment for order 2086 for the amount of 1.16
+02-22-2017 @ 13:21:49 - charges request: Array
+(
+    [currency] => aud
+    [amount] => 116
+    [description] => Hard Labour Workwear - Order 2086
+    [capture] => true
+    [expand[]] => balance_transaction
+    [source] => tok_19pplEHE27GpUcsjkJM7BfOG
+)
+
+02-22-2017 @ 13:21:51 - Processing response: stdClass Object
+(
+    [id] => ch_19pplJHE27GpUcsj1MtklVSb
+    [object] => charge
+    [amount] => 116
+    [amount_refunded] => 0
+    [application] => 
+    [application_fee] => 
+    [balance_transaction] => stdClass Object
+        (
+            [id] => txn_19pplLHE27GpUcsjKdYGjFxr
+            [object] => balance_transaction
+            [amount] => 116
+            [available_on] => 1488326400
+            [created] => 1487730109
+            [currency] => aud
+            [description] => Hard Labour Workwear - Order 2086
+            [fee] => 32
+            [fee_details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [amount] => 29
+                            [application] => 
+                            [currency] => aud
+                            [description] => Stripe processing fees
+                            [type] => stripe_fee
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [amount] => 3
+                            [application] => 
+                            [currency] => aud
+                            [description] => GST
+                            [type] => tax
+                        )
+
+                )
+
+            [net] => 84
+            [source] => ch_19pplJHE27GpUcsj1MtklVSb
+            [sourced_transfers] => stdClass Object
+                (
+                    [object] => list
+                    [data] => Array
+                        (
+                        )
+
+                    [has_more] => 
+                    [total_count] => 0
+                    [url] => /v1/transfers?source_transaction=ch_19pplJHE27GpUcsj1MtklVSb
+                )
+
+            [status] => pending
+            [type] => charge
+        )
+
+    [captured] => 1
+    [created] => 1487730109
+    [currency] => aud
+    [customer] => 
+    [description] => Hard Labour Workwear - Order 2086
+    [destination] => 
+    [dispute] => 
+    [failure_code] => 
+    [failure_message] => 
+    [fraud_details] => stdClass Object
+        (
+        )
+
+    [invoice] => 
+    [livemode] => 1
+    [metadata] => stdClass Object
+        (
+        )
+
+    [on_behalf_of] => 
+    [order] => 
+    [outcome] => stdClass Object
+        (
+            [network_status] => approved_by_network
+            [reason] => 
+            [risk_level] => normal
+            [seller_message] => Payment complete.
+            [type] => authorized
+        )
+
+    [paid] => 1
+    [receipt_email] => 
+    [receipt_number] => 
+    [refunded] => 
+    [refunds] => stdClass Object
+        (
+            [object] => list
+            [data] => Array
+                (
+                )
+
+            [has_more] => 
+            [total_count] => 0
+            [url] => /v1/charges/ch_19pplJHE27GpUcsj1MtklVSb/refunds
+        )
+
+    [review] => 
+    [shipping] => 
+    [source] => stdClass Object
+        (
+            [id] => card_19pplEHE27GpUcsjHfT0asCG
+            [object] => card
+            [address_city] => 
+            [address_country] => 
+            [address_line1] => 
+            [address_line1_check] => 
+            [address_line2] => 
+            [address_state] => 
+            [address_zip] => 
+            [address_zip_check] => 
+            [brand] => Visa
+            [country] => AU
+            [customer] => 
+            [cvc_check] => pass
+            [dynamic_last4] => 
+            [exp_month] => 12
+            [exp_year] => 2019
+            [fingerprint] => bxMaeOd2asyUTojI
+            [funding] => debit
+            [last4] => 2572
+            [metadata] => stdClass Object
+                (
+                )
+
+            [name] => marketing@originalthreads.com.au
+            [tokenization_method] => 
+        )
+
+    [source_transfer] => 
+    [statement_descriptor] => 
+    [status] => succeeded
+    [transfer_group] => 
+)
+
+02-22-2017 @ 13:21:57 - Success: Stripe charge complete (Charge ID: ch_19pplJHE27GpUcsj1MtklVSb)
