@@ -31,7 +31,9 @@
 		$('#matrix_form > input').addClass('btn');
 		$('.summary form .variation_form_section select').addClass('button');
 	       
+		$('.btn-single').trigger("click");
 
+		
 		var ele_arr = $('#matrix_form_table td .qty_input');
 
 	        ele_arr.each(function(){

@@ -124,7 +124,7 @@ $info_boxes = array();
 		</div>
 	</form>
 
-	<input class="button btn-back-to-single" type="button" value="<?php _e( '<-- Singular Order Form', 'wc_bulk_variations' ); ?>" />
+	<input class="button btn btn-default btn-back-to-single" type="button" value="<?php _e( '<-- Singular Order Form', 'wc_bulk_variations' ); ?>" />
 	<div id="matrix_form_info_holder" style="display:none;" >
 		<?php foreach ( $info_boxes as $key => $field_data ) : ?>
 
