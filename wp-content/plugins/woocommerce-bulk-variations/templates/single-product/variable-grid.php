@@ -26,15 +26,27 @@ $info_boxes = array();
 		<?php woocommerce_template_single_excerpt(); ?>
 	</div>
 	<form id="wholesale_form" action="" class="bulk_variations_form cart matrix" method="post" enctype='multipart/form-data'>
-		<table id="matrix_form_table">
+		<div class="fixed-table-container" style="<?php if (count($matrix)>3){
+             //echo "height: 270px;";
+           } 
+           ?>">
+           
+        <!-- <div class="header-background"> </div> -->
+             <div class="fixed-table-container-inner extrawrap">
+                <div class="table-responsive">   
+		
+		<table id="matrix_form_table" class="table">
 			<thead>
 				<tr>
-					<th></th>
+					<th><div class="extra-wrap"><div class="th-inner"></div></div></th>
+                    <th><div class="extra-wrap"><div class="th-inner"></div></div></th>
 					<?php foreach ( $matrix_columns as $column ) : ?>
-						<th><?php echo woocommerce_bulk_variations_get_title( $column_attribute, $column ); ?></th>
+						<th><div class="extra-wrap"><div class="th-inner"><?php echo woocommerce_bulk_variations_get_title($column_attribute, $column); ?>
+                            </div></div>
+                        </th>
 					<?php endforeach; ?>
 					<?php if ( $wc_bulk_variations->get_setting( 'use_quantity_selectors', false ) ) : ?>
-						<th></th>
+						<th><div class="extra-wrap"><div class="th-inner"></div></div></th>
 					<?php endif; ?>
 				</tr>
 			</thead>
@@ -42,7 +54,20 @@ $info_boxes = array();
 				<?php foreach ( $matrix as $row => $columns ) : ?>
 					<?php $column_index = 0; ?>
 					<tr class="<?php echo $row_index % 2 == 0 ? '' : 'alt'; ?>" data-index="<?php echo $row_index; ?>">
-						<td class="row-label"><?php echo woocommerce_bulk_variations_get_title( $row_attribute, $matrix_rows[$row_index] ); ?></td>
+						
+						<?php $row_color = woocommerce_bulk_variations_get_title($row_attribute, $matrix_rows[$row_index]); ?>
+						
+						<td class="row-label"><?php echo $row_color; ?></td>
+						
+						<td class="row-color-indicator-col">
+                             <?php $color_slug = sanitize_title($row_color);                                                   
+                             $term_obj = get_term_by( "slug", $color_slug, "pa_colour");                      
+                             $swatch_term = new WC_Swatch_Term( 'swatches_id', $term_obj->term_id, 'pa_colour', false, "variation_table_color" );                                                  
+                             //$color_thumbnail_id = get_woocommerce_term_meta($term_obj->term_id, 'pa_colour_swatches_id_photo', true);                                                   
+                             echo  $swatch_term->get_output();
+                             //$color_imgsrc = wp_get_attachment_image_src($color_thumbnail_id, $this->size);
+                             ?>  
+                        </td>
 
 						<?php foreach ( $columns as $key => $field_data ): ?>
 							<?php $column_index++; ?>
@@ -108,15 +133,30 @@ $info_boxes = array();
 				<?php endforeach; ?>
 			</tbody>
 			<tfoot>
+			
 				<tr>
-					<td colspan="<?php echo $column_index + 1; ?>">
-						<?php do_action( 'woocommerce_bv_before_add_to_cart_button' ); ?>
-						<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters( 'single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), 'variable' ); ?></button>
-						<?php do_action( 'woocommerce_bv_after_add_to_cart_button' ); ?>
-					</td>
+					<td><div class="extra-wrap"><div class="th-inner"></div></div></td>
+                                        <td><div class="extra-wrap"><div class="th-inner"></div></div></td>
+					<?php foreach ($matrix_columns as $column) : ?>
+						<td><div class="extra-wrap"><div class="th-inner"><?php echo woocommerce_bulk_variations_get_title($column_attribute, $column); ?>
+                                                    </div></div>
+                                                </td>					
+                                        <?php endforeach; ?>
+					<?php if ($wc_bulk_variations->get_setting('use_quantity_selectors', false)) : ?>
+						<td><div class="extra-wrap"><div class="th-inner"></div></div></td>
+					<?php endif; ?>
 				</tr>
+				
 			</tfoot>
 		</table>
+		
+		</div>
+      </div>
+    </div>
+      
+      	<?php do_action( 'woocommerce_bv_before_add_to_cart_button' ); ?>
+			<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters( 'single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), 'variable' ); ?></button>
+		<?php do_action( 'woocommerce_bv_after_add_to_cart_button' ); ?>
 
 		<div>
 			<input type="hidden" name="add-variations-to-cart" value="true" />
