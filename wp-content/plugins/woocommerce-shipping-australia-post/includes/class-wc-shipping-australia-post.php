@@ -508,12 +508,13 @@ class WC_Shipping_Australia_Post extends WC_Shipping_Method {
 	 * @return void
 	 */
 	public function calculate_shipping( $package = array() ) {
+		
 		$this->found_rates      = array();
 		$this->rate_cache       = get_transient( 'wc_australia_post_quotes' );
 		$this->is_international = $this->is_international( $package );
 		$headers                = $this->get_request_header();
 		$package_requests       = $this->get_package_requests( $package );
-
+		
 		$this->debug( __( 'Australia Post debug mode is on - to hide these messages, turn debug mode off in the settings.', 'woocommerce-shipping-australia-post' ) );
 
 		// Prepare endpoints
@@ -540,7 +541,7 @@ class WC_Shipping_Australia_Post extends WC_Shipping_Method {
 		if ( $package_requests ) {
 
 			foreach ( $package_requests as $key => $package_request ) {
-
+				
 				$request = http_build_query( array_merge( $package_request, $this->get_request( $package ) ), '', '&' );
 
 				if ( isset( $package_request['thickness'] ) ) {
@@ -548,9 +549,10 @@ class WC_Shipping_Australia_Post extends WC_Shipping_Method {
 				} else {
 					$response = $this->get_response( $services_endpoint, $request, $headers );
 				}
+				
 
-				if ( isset( $response->services->service ) && is_array( $response->services->service ) ) {
-
+				if ( isset( $response->services->service ) && is_array( $response->services->service ) ) {	
+					
 					// Loop our known services
 					foreach ( $this->services as $service => $values ) {
 
@@ -901,6 +903,8 @@ class WC_Shipping_Australia_Post extends WC_Shipping_Method {
 			}
 
 			$weight = wc_get_weight( $values['data']->get_weight(), 'kg' );
+			// changed by jack
+			$weight = 0.1;
 			$price  = $values['data']->get_price();
 			for ( $i = 0; $i < $values['quantity']; $i++ ) {
 				$packer->add_item( 0, 0, 0, $weight, $price );
@@ -911,7 +915,7 @@ class WC_Shipping_Australia_Post extends WC_Shipping_Method {
 		$box->set_max_weight( $this->max_weight );
 		$packer->pack();
 		$packages = $packer->get_packages();
-
+		
 		if ( sizeof( $packages ) > 1 ) {
 			$this->debug( __( 'Package is too heavy. Splitting.', 'woocommerce-shipping-australia-post' ), 'error' );
 			$this->debug( "Splitting into " . sizeof( $packages ) . ' packages.' );
