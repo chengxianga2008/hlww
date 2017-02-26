@@ -38,9 +38,11 @@
 
 				$('.btn-bulk').click(function() {
 					$('div.product').slideUp('200', function() {
+						
 						$('.variations_form').hide();
 						$('#matrix_form').slideDown('400', function() {
 							$('#qty_input_0').focus();
+							$('[data-toggle="tooltip"]').tooltip("hide");
 						});
 					});
 

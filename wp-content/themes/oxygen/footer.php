@@ -64,6 +64,8 @@
 	     $('.offers .variation_form_section a').offers('show');
 	}
 
+	$('[data-toggle="tooltip"]').tooltip(); 
+
 	});
 	</script>
 	

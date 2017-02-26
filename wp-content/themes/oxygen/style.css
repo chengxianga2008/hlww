@@ -70,6 +70,14 @@
 	margin-right:5px
 }
 
+#wholesale_form .single_add_to_cart_button{
+	float: right;
+	margin-right:0px;
+	border-radius: 2px;
+	margin-top: 10px;
+	margin-bottom:0px;
+}
+
 #matrix_form_table .single_add_to_cart_button:hover, .summary .button.btn-bulk:hover{
 	background-color: #be1b21;
 }	
@@ -77,6 +85,13 @@
 .button.btn-back-to-single{
 	background-color: #7b599b;
 	border-radius: 2px;
+	margin-bottom: 0px;
+	
+}
+
+.btn-back-to-single-wrapper{
+	padding-top: 10px;
+	border-left: 1px solid #C4C4C4;
 }
 
 .button.btn-back-to-single:hover{
@@ -151,4 +166,12 @@ float: none;
 	width: 75%;
 min-width: 70px;
 margin: 0px 10px;
+}
+
+#picker_pa_colour .select-wrapper{
+	display: none;
+}
+
+#matrix_form_table .price{
+	display: none;
 }

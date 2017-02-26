@@ -94,6 +94,8 @@ $info_boxes = array();
 										class="number qty_input" 
 										type="text" 
 										name="order_info[<?php echo $cell_index; ?>][quantity]" 
+										data-toggle="tooltip"
+							
 										/>
 										<?php if ( $wc_bulk_variations->get_setting( 'show_prices_in_grid', true ) ) : ?>
 										<p><?php echo $field_data['price_html']; ?></p>
@@ -164,7 +166,9 @@ $info_boxes = array();
 		</div>
 	</form>
 
-	<input class="button btn btn-default btn-back-to-single" type="button" value="<?php _e( '<-- Singular Order Form', 'wc_bulk_variations' ); ?>" />
+	<div class="btn-back-to-single-wrapper">
+		<input class="button btn btn-default btn-back-to-single" type="button" value="<?php _e( '<-- Singular Order Form', 'wc_bulk_variations' ); ?>" />
+	</div>
 	<div id="matrix_form_info_holder" style="display:none;" >
 		<?php foreach ( $info_boxes as $key => $field_data ) : ?>
 
