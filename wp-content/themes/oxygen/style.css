@@ -175,3 +175,7 @@ margin: 0px 10px;
 #matrix_form_table .price{
 	display: none;
 }
+
+.shipping input[type="radio"], .shipping input[type="checkbox"]{
+	top: -2px;
+}
