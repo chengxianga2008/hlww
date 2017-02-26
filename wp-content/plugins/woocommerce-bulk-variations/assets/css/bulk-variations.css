@@ -18,11 +18,12 @@ form.is_bulk.variations_form, div#matrix_form {
 	border-collapse: separate;
 	border-left: 1px solid #C4C4C4;
 	border-top: 1px solid #C4C4C4;
-	clear: both;
+	/* changed by jack */
+	/*clear: both;
 	float: none;
 	max-width: 100%;
 	overflow: hidden;
-	width: 100%;
+	width: 100%;*/
 }
 
 #matrix_form_table tbody tr td {

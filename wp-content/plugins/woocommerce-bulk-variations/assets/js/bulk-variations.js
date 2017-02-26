@@ -107,6 +107,12 @@
 					}
 
 				});
+				
+				//changed by jack
+				$("#wholesale_form .row-color-indicator-col div a").click(function(e){
+						e.preventDefault();
+				});
+
 
 			}
 		}

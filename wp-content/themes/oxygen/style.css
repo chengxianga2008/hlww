@@ -26,7 +26,7 @@
   display: none;
 }
 
-#matrix_form_table .single_add_to_cart_button, .summary .button.btn-bulk{
+#wholesale_form .single_add_to_cart_button, .summary .button.btn-bulk{
 	display:inline-block;
 	margin-bottom:0;
 	font-weight:400;
@@ -85,4 +85,70 @@
 
 .btn-default:active:hover{
 	color: #fff;
+}
+
+#wholesale_form tbody .row-color-indicator-col{
+	padding: 8px 2px;
+}
+
+#wholesale_form tbody .row-color-indicator-col .swatch-wrapper{
+	margin: 0px;
+display: inline-block;
+float: none;
+}
+
+#matrix_form_table thead tr th, #matrix_form_table tfoot tr td{
+	
+}
+
+#wholesale_form thead tr th:first-of-type, #wholesale_form thead tr td:first-of-type, #wholesale_form tfoot tr td:first-of-type {
+    border-right: medium none;
+}
+
+#matrix_form_table tfoot tr td {
+    background-color: #C4C4C4;
+    font-weight: bold;
+    padding: 10px;
+    text-shadow: none;
+    border-right: 1px solid #efefef;
+    border-top: none;
+    border-left: none;
+    text-align: center;
+    font-size: 100%;
+}
+
+.fixed-table-container {
+
+    width: 100%;
+    height: auto;
+
+    /*padding-top: 32px;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+}
+
+.fixed-table-container-inner {
+    height: 100%;
+/*     overflow-y: auto; */
+}
+
+.table-responsive {
+    border: none !important;
+    margin-bottom: 0px !important;
+    overflow-x: auto;
+}
+
+.extra-wrap {
+    width: 100%;
+}
+
+.th-inner {
+    
+    z-index: 30;
+}
+
+#matrix_form_table input{
+	width: 75%;
+min-width: 70px;
+margin: 0px 10px;
 }
