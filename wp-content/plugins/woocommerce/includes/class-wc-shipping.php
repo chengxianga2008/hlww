@@ -346,7 +346,8 @@ class WC_Shipping {
 		$session_key    = 'shipping_for_package_' . $package_key;
 		$stored_rates   = WC()->session->get( $session_key );
 
-		if ( ! is_array( $stored_rates ) || $package_hash !== $stored_rates['package_hash'] || ! empty( $status_options['shipping_debug_mode'] ) ) {
+		if(true){
+		//if ( ! is_array( $stored_rates ) || $package_hash !== $stored_rates['package_hash'] || ! empty( $status_options['shipping_debug_mode'] ) ) {
 			// Calculate shipping method rates
 			$package['rates'] = array();
 			
