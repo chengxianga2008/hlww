@@ -904,7 +904,7 @@ class WC_Shipping_Australia_Post extends WC_Shipping_Method {
 
 			$weight = wc_get_weight( $values['data']->get_weight(), 'kg' );
 			// changed by jack
-			$weight = 0.1;
+			//$weight = 0.1;
 			$price  = $values['data']->get_price();
 			for ( $i = 0; $i < $values['quantity']; $i++ ) {
 				$packer->add_item( 0, 0, 0, $weight, $price );
