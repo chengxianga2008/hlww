@@ -24,3 +24,6 @@
 [03-Mar-2017 13:14:09 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/hardlabs/public_html/wp-includes/pomo/streams.php on line 110
 [03-Mar-2017 13:32:37 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/hardlabs/public_html/wp-includes/pomo/streams.php on line 110
 [03-Mar-2017 13:33:38 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/hardlabs/public_html/wp-includes/pomo/streams.php on line 110
+[03-Mar-2017 13:48:56 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/hardlabs/public_html/wp-includes/pomo/streams.php on line 110
+[03-Mar-2017 13:54:27 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/hardlabs/public_html/wp-includes/pomo/streams.php on line 110
+[03-Mar-2017 13:54:39 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/hardlabs/public_html/wp-includes/pomo/streams.php on line 110
