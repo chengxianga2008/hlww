@@ -306,3 +306,164 @@
     [transfer_group] => 
 )
 
+03-04-2017 @ 01:51:14 - Error: Sorry, the minimum allowed order total is <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>0.50</span> to use this payment method.
+03-04-2017 @ 01:54:47 - Info: Begin processing payment for order 2249 for the amount of 0.51
+03-04-2017 @ 01:54:47 - charges request: Array
+(
+    [currency] => aud
+    [amount] => 51
+    [description] => Hard Labour Workwear - Order 2249
+    [capture] => true
+    [expand[]] => balance_transaction
+    [source] => tok_19tHnpHE27GpUcsjixYUfLEw
+)
+
+03-04-2017 @ 01:54:49 - Processing response: stdClass Object
+(
+    [id] => ch_19tHnwHE27GpUcsjWQQrw0bV
+    [object] => charge
+    [amount] => 51
+    [amount_refunded] => 0
+    [application] => 
+    [application_fee] => 
+    [balance_transaction] => stdClass Object
+        (
+            [id] => txn_19tHnxHE27GpUcsjIqhbymxU
+            [object] => balance_transaction
+            [amount] => 51
+            [available_on] => 1488844800
+            [created] => 1488552888
+            [currency] => aud
+            [description] => Hard Labour Workwear - Order 2249
+            [fee] => 31
+            [fee_details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [amount] => 3
+                            [application] => 
+                            [currency] => aud
+                            [description] => GST
+                            [type] => tax
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [amount] => 28
+                            [application] => 
+                            [currency] => aud
+                            [description] => Stripe processing fees
+                            [type] => stripe_fee
+                        )
+
+                )
+
+            [net] => 20
+            [source] => ch_19tHnwHE27GpUcsjWQQrw0bV
+            [sourced_transfers] => stdClass Object
+                (
+                    [object] => list
+                    [data] => Array
+                        (
+                        )
+
+                    [has_more] => 
+                    [total_count] => 0
+                    [url] => /v1/transfers?source_transaction=ch_19tHnwHE27GpUcsjWQQrw0bV
+                )
+
+            [status] => pending
+            [type] => charge
+        )
+
+    [captured] => 1
+    [created] => 1488552888
+    [currency] => aud
+    [customer] => 
+    [description] => Hard Labour Workwear - Order 2249
+    [destination] => 
+    [dispute] => 
+    [failure_code] => 
+    [failure_message] => 
+    [fraud_details] => stdClass Object
+        (
+        )
+
+    [invoice] => 
+    [livemode] => 1
+    [metadata] => stdClass Object
+        (
+        )
+
+    [on_behalf_of] => 
+    [order] => 
+    [outcome] => stdClass Object
+        (
+            [network_status] => approved_by_network
+            [reason] => elevated_risk_level
+            [risk_level] => elevated
+            [rule] => stdClass Object
+                (
+                    [id] => ssr_19o3mnHE27GpUcsjVOdN9hnV
+                    [action] => manual_review
+                    [predicate] => :risk_level: = 'elevated'
+                )
+
+            [seller_message] => Stripe evaluated this charge as having elevated risk, and placed it in your manual review queue.
+            [type] => manual_review
+        )
+
+    [paid] => 1
+    [receipt_email] => 
+    [receipt_number] => 
+    [refunded] => 
+    [refunds] => stdClass Object
+        (
+            [object] => list
+            [data] => Array
+                (
+                )
+
+            [has_more] => 
+            [total_count] => 0
+            [url] => /v1/charges/ch_19tHnwHE27GpUcsjWQQrw0bV/refunds
+        )
+
+    [review] => prv_19tHnxHE27GpUcsjoKIspIEp
+    [shipping] => 
+    [source] => stdClass Object
+        (
+            [id] => card_19tHnoHE27GpUcsjtBrqiVER
+            [object] => card
+            [address_city] => 
+            [address_country] => 
+            [address_line1] => 
+            [address_line1_check] => 
+            [address_line2] => 
+            [address_state] => 
+            [address_zip] => 
+            [address_zip_check] => 
+            [brand] => MasterCard
+            [country] => AU
+            [customer] => 
+            [cvc_check] => pass
+            [dynamic_last4] => 
+            [exp_month] => 12
+            [exp_year] => 2017
+            [fingerprint] => iFsBU0tH2oWKnBpj
+            [funding] => debit
+            [last4] => 9750
+            [metadata] => stdClass Object
+                (
+                )
+
+            [name] => chengxianga2008@yahoo.com
+            [tokenization_method] => 
+        )
+
+    [source_transfer] => 
+    [statement_descriptor] => 
+    [status] => succeeded
+    [transfer_group] => 
+)
+

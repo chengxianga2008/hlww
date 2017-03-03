@@ -47,7 +47,6 @@
   */
  do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_text, $email );
 
-<p><a href="https://hlww.com.au/wp-admin/edit.php?post_type=shop_order"><img src="https://www.hlww.com.au/wp-content/uploads/2017/03/order-status.jpg" alt=""></a></p>
  /**
   * @hooked WC_Emails::email_footer() Output the email footer
   */

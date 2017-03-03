@@ -27,3 +27,14 @@
 [03-Mar-2017 13:48:56 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/hardlabs/public_html/wp-includes/pomo/streams.php on line 110
 [03-Mar-2017 13:54:27 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/hardlabs/public_html/wp-includes/pomo/streams.php on line 110
 [03-Mar-2017 13:54:39 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/hardlabs/public_html/wp-includes/pomo/streams.php on line 110
+[03-Mar-2017 14:16:53 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hardlabs/public_html/wp-content/plugins/woocommerce-bulk-variations/woocommerce-bulk-variations-functions.php on line 83
+[03-Mar-2017 14:16:53 UTC] PHP Warning:  array_values() expects parameter 1 to be array, null given in /home/hardlabs/public_html/wp-content/plugins/woocommerce-bulk-variations/woocommerce-bulk-variations-functions.php on line 108
+[03-Mar-2017 14:16:53 UTC] PHP Warning:  array_values() expects parameter 1 to be array, null given in /home/hardlabs/public_html/wp-content/plugins/woocommerce-bulk-variations/woocommerce-bulk-variations-functions.php on line 109
+[03-Mar-2017 14:16:53 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hardlabs/public_html/wp-content/plugins/woocommerce-bulk-variations/templates/single-product/variable-grid.php on line 43
+[03-Mar-2017 14:16:53 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hardlabs/public_html/wp-content/plugins/woocommerce-bulk-variations/templates/single-product/variable-grid.php on line 142
+[03-Mar-2017 14:17:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hardlabs/public_html/wp-content/plugins/woocommerce-bulk-variations/woocommerce-bulk-variations-functions.php on line 83
+[03-Mar-2017 14:17:40 UTC] PHP Warning:  array_values() expects parameter 1 to be array, null given in /home/hardlabs/public_html/wp-content/plugins/woocommerce-bulk-variations/woocommerce-bulk-variations-functions.php on line 108
+[03-Mar-2017 14:17:40 UTC] PHP Warning:  array_values() expects parameter 1 to be array, null given in /home/hardlabs/public_html/wp-content/plugins/woocommerce-bulk-variations/woocommerce-bulk-variations-functions.php on line 109
+[03-Mar-2017 14:17:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hardlabs/public_html/wp-content/plugins/woocommerce-bulk-variations/templates/single-product/variable-grid.php on line 43
+[03-Mar-2017 14:17:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/hardlabs/public_html/wp-content/plugins/woocommerce-bulk-variations/templates/single-product/variable-grid.php on line 142
+[03-Mar-2017 14:54:50 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/hardlabs/public_html/wp-content/plugins/woocommerce/templates/emails/admin-new-order.php on line 50

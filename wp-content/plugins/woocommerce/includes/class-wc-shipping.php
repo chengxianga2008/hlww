@@ -346,19 +346,15 @@ class WC_Shipping {
 		$session_key    = 'shipping_for_package_' . $package_key;
 		$stored_rates   = WC()->session->get( $session_key );
 
-		if(true){
-		//if ( ! is_array( $stored_rates ) || $package_hash !== $stored_rates['package_hash'] || ! empty( $status_options['shipping_debug_mode'] ) ) {
+		if ( ! is_array( $stored_rates ) || $package_hash !== $stored_rates['package_hash'] || ! empty( $status_options['shipping_debug_mode'] ) ) {
 			// Calculate shipping method rates
 			$package['rates'] = array();
-			
-			foreach ( $this->load_shipping_methods( $package ) as $shipping_method ) {
 
+			foreach ( $this->load_shipping_methods( $package ) as $shipping_method ) {
 				// Shipping instances need an ID
 				if ( ! $shipping_method->supports( 'shipping-zones' ) || $shipping_method->get_instance_id() ) {
 					$package['rates'] = $package['rates'] + $shipping_method->get_rates_for_package( $package ); // + instead of array_merge maintains numeric keys
-					
 				}
-				
 			}
 
 			// Filter the calculated rates
