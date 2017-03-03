@@ -153,3 +153,156 @@
 )
 
 02-22-2017 @ 13:21:57 - Success: Stripe charge complete (Charge ID: ch_19pplJHE27GpUcsj1MtklVSb)
+03-02-2017 @ 17:51:56 - Info: Begin processing payment for order 2242 for the amount of 1.4
+03-02-2017 @ 17:51:57 - charges request: Array
+(
+    [currency] => aud
+    [amount] => 140
+    [description] => Hard Labour Workwear - Order 2242
+    [capture] => true
+    [expand[]] => balance_transaction
+    [source] => tok_19snn2HE27GpUcsjSpaJJ6o0
+)
+
+03-02-2017 @ 17:51:59 - Processing response: stdClass Object
+(
+    [id] => ch_19snn7HE27GpUcsj4pKqSyzs
+    [object] => charge
+    [amount] => 140
+    [amount_refunded] => 0
+    [application] => 
+    [application_fee] => 
+    [balance_transaction] => stdClass Object
+        (
+            [id] => txn_19snn9HE27GpUcsj2Yemv6iH
+            [object] => balance_transaction
+            [amount] => 140
+            [available_on] => 1488758400
+            [created] => 1488437517
+            [currency] => aud
+            [description] => Hard Labour Workwear - Order 2242
+            [fee] => 32
+            [fee_details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [amount] => 29
+                            [application] => 
+                            [currency] => aud
+                            [description] => Stripe processing fees
+                            [type] => stripe_fee
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [amount] => 3
+                            [application] => 
+                            [currency] => aud
+                            [description] => GST
+                            [type] => tax
+                        )
+
+                )
+
+            [net] => 108
+            [source] => ch_19snn7HE27GpUcsj4pKqSyzs
+            [sourced_transfers] => stdClass Object
+                (
+                    [object] => list
+                    [data] => Array
+                        (
+                        )
+
+                    [has_more] => 
+                    [total_count] => 0
+                    [url] => /v1/transfers?source_transaction=ch_19snn7HE27GpUcsj4pKqSyzs
+                )
+
+            [status] => pending
+            [type] => charge
+        )
+
+    [captured] => 1
+    [created] => 1488437517
+    [currency] => aud
+    [customer] => 
+    [description] => Hard Labour Workwear - Order 2242
+    [destination] => 
+    [dispute] => 
+    [failure_code] => 
+    [failure_message] => 
+    [fraud_details] => stdClass Object
+        (
+        )
+
+    [invoice] => 
+    [livemode] => 1
+    [metadata] => stdClass Object
+        (
+        )
+
+    [on_behalf_of] => 
+    [order] => 
+    [outcome] => stdClass Object
+        (
+            [network_status] => approved_by_network
+            [reason] => 
+            [risk_level] => normal
+            [seller_message] => Payment complete.
+            [type] => authorized
+        )
+
+    [paid] => 1
+    [receipt_email] => 
+    [receipt_number] => 
+    [refunded] => 
+    [refunds] => stdClass Object
+        (
+            [object] => list
+            [data] => Array
+                (
+                )
+
+            [has_more] => 
+            [total_count] => 0
+            [url] => /v1/charges/ch_19snn7HE27GpUcsj4pKqSyzs/refunds
+        )
+
+    [review] => 
+    [shipping] => 
+    [source] => stdClass Object
+        (
+            [id] => card_19snn1HE27GpUcsjjnW3Tx1W
+            [object] => card
+            [address_city] => 
+            [address_country] => 
+            [address_line1] => 
+            [address_line1_check] => 
+            [address_line2] => 
+            [address_state] => 
+            [address_zip] => 
+            [address_zip_check] => 
+            [brand] => MasterCard
+            [country] => AU
+            [customer] => 
+            [cvc_check] => pass
+            [dynamic_last4] => 
+            [exp_month] => 6
+            [exp_year] => 2017
+            [fingerprint] => F5drSYzf0Dsyh7di
+            [funding] => debit
+            [last4] => 7541
+            [metadata] => stdClass Object
+                (
+                )
+
+            [name] => marketing@originalthreads.com.au
+            [tokenization_method] => 
+        )
+
+    [source_transfer] => 
+    [statement_descriptor] => 
+    [status] => succeeded
+    [transfer_group] => 
+)
+
